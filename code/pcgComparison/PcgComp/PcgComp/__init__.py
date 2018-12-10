@@ -1,9 +1,9 @@
 import warnings
 warnings.filterwarnings("ignore", category=DeprecationWarning)
 
-import methods
-import preconditioners
-import kernels
+import PcgComp.methods
+import PcgComp.preconditioners
+import PcgComp.kernels
 
 
 def load(file_path):
