@@ -1,5 +1,5 @@
 import numpy as np
-from cg import Cg
+from PcgComp.methods.cg import Cg
 
 """
 Solve linear system using flexible conjugate gradient (without truncation)

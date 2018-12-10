@@ -1,7 +1,7 @@
 import numpy as np
-from cg import Cg
+from PcgComp.methods.cg import Cg
 from scipy import sparse
-from kronCgDirect import KronCgDirect
+from PcgComp.methods.kronCgDirect import KronCgDirect
 
 
 """

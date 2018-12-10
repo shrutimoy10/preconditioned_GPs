@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.stats import norm
-from cg import Cg
+from PcgComp.methods.cg import Cg
 import random
 
 """
