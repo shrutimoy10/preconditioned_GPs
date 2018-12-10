@@ -1,14 +1,18 @@
 import sys
 import numpy as np
 import random as ran
+import os 
+retval = os.getcwd()
+os.chdir(retval + "/PcgComp")
 import PcgComp
+os.chdir(retval)
 import random as ran
 import time
 
 def standardizeData(array):
 	arr = array.copy()
 	rows, cols = arr.shape
-	for col in xrange(cols):
+	for col in range(cols):
 		std = np.std(arr[:,col])
 		mean = np.mean(arr[:,col])
 		arr[:,col] = (arr[:,col] - mean) / std
@@ -17,7 +21,7 @@ def standardizeData(array):
 def normalizeColumns(array):
 	arr = array.copy()
 	rows, cols = arr.shape
-	for col in xrange(cols):
+	for col in range(cols):
 		maxim = arr[:,col].max()
 		minim = arr[:,col].min()
 		arr[:,col] = (arr[:,col] - minim) / (maxim - minim)
@@ -81,7 +85,7 @@ else:
 	pcg = PcgComp.methods.RegularPcg(K, Y, P, threshold=th,preconInv=precon.get_inversion())
 	pcgIterations = int(pcg.iterations)
 
-print cgIterations
-print pcgIterations
-print np.log10(float(pcgIterations)/float(cgIterations))
+print(cgIterations)
+print(pcgIterations)
+print(np.log10(float(pcgIterations)/float(cgIterations)))
 
