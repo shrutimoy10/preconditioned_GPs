@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.spatial.distance import cdist
-from kernel import Kernel
+from PcgComp.kernels.kernel import Kernel
 
 """
 Implementation of isotropic Matern-3/2 kernel

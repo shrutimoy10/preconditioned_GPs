@@ -1,3 +1,3 @@
-from kernel import Kernel
-from rbf import RBF
-from matern32 import Matern32
+from PcgComp.kernels.kernel import Kernel
+from PcgComp.kernels.rbf import RBF
+from PcgComp.kernels.matern32 import Matern32
