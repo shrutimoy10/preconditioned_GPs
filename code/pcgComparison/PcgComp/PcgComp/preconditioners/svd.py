@@ -1,7 +1,7 @@
 import numpy as np
 import time
 from sklearn.utils.extmath import randomized_svd
-from preconditioner import Preconditioner
+from PcgComp.preconditioners.preconditioner import Preconditioner
 
 
 """

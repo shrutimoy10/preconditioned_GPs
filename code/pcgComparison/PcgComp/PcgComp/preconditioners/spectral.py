@@ -12,8 +12,8 @@
 
 import numpy as np
 import time
-from preconditioner import Preconditioner
-from nystrom import Nystrom
+from PcgComp.preconditioners.preconditioner import Preconditioner
+from PcgComp.preconditioners.nystrom import Nystrom
 from ..util.ssgp import SsgpHelper
 
 """

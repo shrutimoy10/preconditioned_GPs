@@ -18,7 +18,7 @@
 
 
 import numpy as np
-from preconditioner import Preconditioner
+from PcgComp.preconditioners.preconditioner import Preconditioner
 import time
 
 """

@@ -17,7 +17,7 @@
 
 import numpy as np
 import time
-from preconditioner import Preconditioner
+from PcgComp.preconditioners.preconditioner import Preconditioner
 from ..util.kronHelper import KronHelper
 import math
 

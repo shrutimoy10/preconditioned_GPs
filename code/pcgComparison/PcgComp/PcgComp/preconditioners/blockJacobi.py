@@ -1,6 +1,6 @@
 import numpy as np
 from scipy.linalg import block_diag
-from preconditioner import Preconditioner
+from PcgComp.preconditioners.preconditioner import Preconditioner
 import time
 
 """
