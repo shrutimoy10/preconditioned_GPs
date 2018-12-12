@@ -1,2 +1,11 @@
 To run the experiment_*.py files:
-python experiment_*.py "some value" "variance" "lengthscale of rbf kernel" "noise"
+python experiment_*.py "type of preconditioner" "variance" "lengthscale of rbf kernel" "noise"
+
+types of precondtioners:
+1. kron - stuctured kernel interpolation
+2. block - block jacobi
+3. svd - partial svd
+4. pitc - partially independent training conditional
+5. fitc - fully independent training conditional
+6. spectral - spectral approximation
+
