@@ -8,7 +8,7 @@ import time
 def standardizeData(array):
 	arr = array.copy()
 	rows, cols = arr.shape
-	for col in xrange(cols):
+	for col in range(cols):
 		std = np.std(arr[:,col])
 		mean = np.mean(arr[:,col])
 		arr[:,col] = (arr[:,col] - mean) / std
@@ -17,7 +17,7 @@ def standardizeData(array):
 def normalizeColumns(array):
 	arr = array.copy()
 	rows, cols = arr.shape
-	for col in xrange(cols):
+	for col in range(cols):
 		maxim = arr[:,col].max()
 		minim = arr[:,col].min()
 		arr[:,col] = (arr[:,col] - minim) / (maxim - minim)
@@ -30,8 +30,8 @@ args = sys.argv
 data = np.loadtxt('PowerPlant_Data.csv',delimiter=',')
 data = standardizeData(data)
 
-X = data[:,:4]
-Y = data[:,4][:,None]
+X = data[:5000,:4] #taking a subset of the data
+Y = data[:5000,4][:,None]
 
 seed = 48
 np.random.seed(seed)
@@ -81,7 +81,7 @@ else:
 	pcg = PcgComp.methods.RegularPcg(K, Y, P, threshold=th,preconInv=precon.get_inversion())
 	pcgIterations = int(pcg.iterations)
 
-print cgIterations
-print pcgIterations
-print np.log10(float(pcgIterations)/float(cgIterations))
+print(cgIterations)
+print(pcgIterations)
+print(np.log10(float(pcgIterations)/float(cgIterations)))
 
